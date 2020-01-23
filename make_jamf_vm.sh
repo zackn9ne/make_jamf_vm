@@ -21,7 +21,7 @@ echo ""
 
 echo "Quit VMWARE and, show the virtual machine you will be blessing in the finder, drag the path of the VM's inside VMX file as an argument to this script"
 read -p "Press enter to continue".
-echo "fake Serial Number, will be:" $(echo SN)
+echo "fake Serial Number, will be:" $SN
 
 echo "drag the path to your .VMX FILE here"
 echo "we are about to pop up your finder window of the default VMWare VM's location so you can do this easier"
