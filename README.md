@@ -2,16 +2,18 @@
 Jamf Pro & VMWare Fusion living in harmony
 
 # What does this do
-* Generates a random serial number or you can set one and Device ID so you can clone macOS VM's and not have them clash in a JAMF Pro Install
+* Generates a random serial number or you can set one 
+* Generates a Device ID or you can choose one
 
 # What problem does this solve?
+* You can clone macOS VM's and not have them fail a JAMF Pro Install
 * Make one macOS VM and user initiated install it ✅
 * Clone that macOS VM and try to user initiated enroll it into Jamf Pro ❌ it will trip over the serial number and fail
 
 ## Dependancies
-1. you need VMWare Fusion and macOS
+1. VMWare Fusion and macOS
 2. make an macOS VM I forget how I did this but you can google it
-3. Be able to browse to where your VM's are located and "Show Package Contents" able to find the `.vmx` file 
+3. Browse to where your VM's are located and "Show Package Contents" able to find the `.vmx` file 
 
 ## How To Use
 * `git clone https://github.com/zackn9ne/make_jamf_vm.git && cd make_jamf_vm`
