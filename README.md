@@ -16,7 +16,7 @@ Jamf Pro & VMWare Fusion living in harmony
 ## How To Use
 * `git clone https://github.com/zackn9ne/make_jamf_vm.git && cd make_jamf_vm`
 * `sh make_jamfvm.sh` it will prompt you for stuff, there are no arguments.
-* Load that VM you just blessed in VMWARE, and now you can enroll it in JAMF without problems
+* Open said VM you just blessed in VMWARE, and now you can enroll it in JAMF without problems
 
 ## Troubleshooting
 * If you have a failed enroll you have to go to the Devices tab in JamfPro and clear out the Device by deleting it, it thinks it was an Device, Not a Computer, I know
