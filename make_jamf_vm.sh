@@ -1,17 +1,5 @@
 #!/bin/bash
-#
-# To use this script, quit VMware Fusion first!!!
-# src: https://www.jamf.com/jamf-nation/discussions/30708/vmware-fusion-virtual-mac-unable-to-enroll
-#
-# You'll be dragging this script into Terminal, then dragging the *.vmx file into Terminal.
-# This requires sudo rights, but you already knew that, right? :)
-#
-#    /path/to/ThisScript.sh (no arguments needed you will be prompted)
-#
-# 20180208 DM
-
 SN=$(python -c "import string; from random import randint, sample; print('VM' + ''.join(sample((string.ascii_uppercase + string.digits),10)))")
-#VMXFILE="$1"
 
 echo ""
 echo "**********************************************************"
