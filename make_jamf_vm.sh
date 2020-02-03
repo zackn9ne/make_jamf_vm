@@ -19,12 +19,12 @@ echo "IMPORTANT: To use this script, quit VMware Fusion first!!!"
 echo "**********************************************************"
 echo ""
 
-echo "Quit VMWARE and, show the virtual machine you will be blessing in the finder, drag the path of the VM's inside VMX file as an argument to this script"
+echo "*** Shutdown your VM's and Quit VMWARE ***"
 read -p "Press enter to continue".
 echo "fake Serial Number, will be:" $SN
 
-echo "drag the path to your .VMX FILE here"
-echo "we are about to pop up your finder window of the default VMWare VM's location so you can do this easier"
+echo "*** We are about to pop up your finder window of the default VMWare VM's location so you can do this easier"
+echo "**** Drag the VMX file to the whitespace here and press [enter] when done ****"
 open ~/Virtual\ Machines.localized/
 read VMXFILE
 
@@ -50,7 +50,14 @@ sed -i '' '/serialNumber/d' "$VMXFILE"
 
 # Add Model Identifier and Serial Number
 
+echo "*** Welcome to your new Mac ***"
 echo "hw.model = $MODELIDENTIFIER" >> "$VMXFILE"
+echo "*******************************"
+echo "*******************************"
+echo "*******************************"
+echo "*******************************"
 echo "serialNumber = $SN" >> "$VMXFILE"
+echo "*******************************"
+echo "***** zackn9ne made it ********"
 
 exit 0
