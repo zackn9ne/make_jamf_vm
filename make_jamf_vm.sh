@@ -36,8 +36,11 @@ sed -i '' '/uuid.location/d' "$VMXFILE"
 sed -i '' '/hw.model/d' "$VMXFILE"
 sed -i '' '/serialNumber/d' "$VMXFILE"
 
-# Add Model Identifier and Serial Number
+# Do all the stuff
+$MODELIDENTIFIER" >> "$VMXFILE"
+$SN" >> "$VMXFILE"
 
+# Present End Screen
 echo "*** Welcome to your new Mac ***"
 echo "*******************************"
 echo "*******************************"
