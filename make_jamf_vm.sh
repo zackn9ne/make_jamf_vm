@@ -39,12 +39,12 @@ sed -i '' '/serialNumber/d' "$VMXFILE"
 # Add Model Identifier and Serial Number
 
 echo "*** Welcome to your new Mac ***"
-echo "hw.model" $MODELIDENTIFIER
 echo "*******************************"
 echo "*******************************"
 echo "*******************************"
 echo "*******************************"
-echo "serialNumber" $SN 
+echo "*** hw.model" $MODELIDENTIFIER "*****"
+echo "*** serialNumber" $SN "***"
 echo "*******************************"
 echo "***** zackn9ne made it ********"
 
