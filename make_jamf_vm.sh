@@ -37,8 +37,8 @@ sed -i '' '/hw.model/d' "$VMXFILE"
 sed -i '' '/serialNumber/d' "$VMXFILE"
 
 # Do all the stuff
-$MODELIDENTIFIER" >> "$VMXFILE"
-$SN" >> "$VMXFILE"
+echo "hw.model = $MODELIDENTIFIER" >> "$VMXFILE"
+echo "serialNumber = $SN" >> "$VMXFILE"
 
 # Present End Screen
 echo "*** Welcome to your new Mac ***"
@@ -46,9 +46,9 @@ echo "*******************************"
 echo "*******************************"
 echo "*******************************"
 echo "*******************************"
-echo "*** hw.model" $MODELIDENTIFIER "***"
-echo "*** serialNumber" $SN "*"
+echo "***" $MODELIDENTIFIER "************"
+echo "***"  $SN "*************"
 echo "*******************************"
-echo "***** zackn9ne made it ********"
+echo "*******************************"
 
 exit 0
