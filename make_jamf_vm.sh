@@ -9,7 +9,7 @@ echo ""
 
 echo "*** Shutdown your VM's and Quit VMWARE ***"
 read -p "Press enter to continue".
-echo "fake Serial Number, will be:" $SN
+echo "fake Serial Number Generated and ready to use"
 
 echo "*** We are about to pop up your finder window of the default VMWare VM's location so you can do this easier"
 echo "**** Drag the VMX file to the whitespace here and press [enter] when done ****"
@@ -25,7 +25,14 @@ else
     read MODELIDENTIFIER
 fi
 
-
+read -r -p "Do you want fake Serial Number or your own [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+    SN="$SN"
+else
+    echo "Ok type in your own serial:"
+    read SN
+fi
 # Remove device specific crud
 
 sed -i '' '/ethernet0.addressType/d' "$VMXFILE"
