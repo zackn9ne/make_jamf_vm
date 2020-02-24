@@ -1,5 +1,5 @@
 # Make Jamf VM
-When you clone a VM, you can't enroll it into JAMF because the serial number of the previous one will be stuck in there. This lets you specify the SN of the cloned VM so you can enroll.
+When you are too lazy to edit the VMX file, and come up with a fake serial number and Model ID this does all of that for you.
 
 # What does this do
 * Generates a random serial number or you can set one 
