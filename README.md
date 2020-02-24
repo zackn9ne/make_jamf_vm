@@ -1,5 +1,5 @@
 # Make Jamf VM
-Jamf Pro & VMWare Fusion living in harmony
+When you clone a VM, you can't enroll it into JAMF because the serial number of the previous one will be stuck in there. This lets you specify the SN of the cloned VM so you can enroll.
 
 # What does this do
 * Generates a random serial number or you can set one 
