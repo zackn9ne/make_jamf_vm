@@ -5,6 +5,8 @@ Jamf Pro & VMWare Fusion living in harmony
 * Generates a random serial number or you can set one 
 * Generates a Device ID or you can choose one
 
+!(makejamfvm.gif)
+
 # What problem does this solve?
 * You can clone macOS VM's and not have them fail a JAMF Pro Install
 * Make one macOS VM and user initiated install it ✅
