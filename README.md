@@ -19,7 +19,7 @@ When you are too lazy to edit the VMX file, and come up with a fake serial numbe
 
 ## How To Use
 * `git clone https://github.com/zackn9ne/make_jamf_vm.git && cd make_jamf_vm`
-* `sh make_jamfvm.sh` it will prompt you for stuff, there are no arguments.
+* `sh make_jamf_vm.sh` it will prompt you for stuff, there are no arguments.
 * Open said VM you just blessed in VMWARE, and now you can enroll it in JAMF without problems
 
 ## Troubleshooting
