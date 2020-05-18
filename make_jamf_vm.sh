@@ -7,13 +7,17 @@ echo "IMPORTANT: To use this script, quit VMware Fusion first!!!"
 echo "**********************************************************"
 echo ""
 
-echo "*** Shutdown your VM's and Quit VMWARE ***"
+echo "Select Shut Down from the VM you are cloning before running this."
 read -p "Press enter to continue".
-echo "fake Serial Number Generated and ready to use"
+killall "VMware Fusion"
 
-echo "*** We are about to pop up your finder window of the default VMWare VM's location so you can do this easier"
-echo "**** Drag the VMX file to the whitespace here and press [enter] when done ****"
-open ~/Virtual\ Machines.localized/
+read -r -p "Do you want to open Default VM's Folder in finder to make this easier?" response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+    open ~/Virtual\ Machines.localized/
+else
+    echo "Browse to the folder containing your VM, Right Click, Show Package Contents, and drag the VMX File to this window."
+fi
 read VMXFILE
 
 read -r -p "Your getting ModelIdentifier MacBookPro15,1 is this OK? [y/N] " response

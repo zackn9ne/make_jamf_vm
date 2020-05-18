@@ -5,7 +5,7 @@ When you are too lazy to edit the VMX file, and come up with a fake serial numbe
 * Generates a random serial number or you can set one 
 * Generates a Device ID or you can choose one
 
-![](https://github.com/zackn9ne/make_jamf_vm/raw/master/makejamfvm.gif)
+![](https://github.com/zackn9ne/make_jamf_vm/raw/master/example.gif)
 
 # What problem does this solve?
 * You can clone macOS VM's and not have them fail a JAMF Pro Install
