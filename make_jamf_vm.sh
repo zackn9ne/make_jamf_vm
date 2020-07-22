@@ -18,7 +18,19 @@ then
 else
     echo "Browse to the folder containing your VM, Right Click, Show Package Contents, and drag the VMX File to this window."
 fi
+
 read VMXFILE
+
+read -r -p "Your VMXFILE is $VMXFILE this OK? Make sure your terminal emulator escaped path slashes. [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+    echo "proceeding to convert"
+    sleep 1
+    clear
+else
+    echo "Ok we are going to break and start over ok."
+    exit 0
+fi
 
 read -r -p "Your getting ModelIdentifier MacBookPro15,1 is this OK? [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
@@ -30,6 +42,7 @@ else
 fi
 
 read -r -p "Do you want fake Serial Number or your own [y/N] " response
+    sleep 1
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     SN="$SN"
