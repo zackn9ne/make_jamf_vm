@@ -1,13 +1,17 @@
 #!/bin/bash
 SN=$(python -c "import string; from random import randint, sample; print('VM' + ''.join(sample((string.ascii_uppercase + string.digits),10)))")
+INSTRUCTS="Browse to the folder containing your VM, Right Click, Show Package Contents, and drag the VMX File to this window."
 
 echo ""
 echo "**********************************************************"
-echo "IMPORTANT: To use this script, quit VMware Fusion first!!!"
+echo "IMPORTANT: To use this script, shut down the VM first  !!!"
+echo "IMPORTANT: To use this script, shut down the VM first  !!!"
+echo "IMPORTANT: Don't just suspend it, either VMWARE menu   !!!"
+echo "Shut Down, or apple menu Shut Down from inside the VM  !!!"
 echo "**********************************************************"
 echo ""
 
-echo "Select Shut Down from the VM you are cloning before running this."
+echo "Press enter if the VM is Shut Down and not just suspended."
 read -p "Press enter to continue".
 killall "VMware Fusion"
 
@@ -15,13 +19,14 @@ read -r -p "Do you want to open Default VM's Folder in finder to make this easie
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     open ~/Virtual\ Machines.localized/
+    echo $INSTRUCTS    
 else
-    echo "Browse to the folder containing your VM, Right Click, Show Package Contents, and drag the VMX File to this window."
+    echo $INSTRUCTS
 fi
 
 read VMXFILE
 
-read -r -p "Your VMXFILE is $VMXFILE this OK? Make sure your terminal emulator escaped path slashes. [y/N] " response
+read -r -p "Your VMXFILE is $VMXFILE this OK? Make sure your terminal emulator escaped path slashes, iTerm usually messes this up, default Apple Terminal will be fine. [y/N] " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 then
     echo "proceeding to convert"
